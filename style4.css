@@ -1,0 +1,13 @@
+p:first-child::first-letter {
+  color: red;
+  font-size: 50px;
+}
+
+li::marker {
+  color: green;
+}
+
+body::selection {
+  background-color: yellow;
+  color: red;
+}

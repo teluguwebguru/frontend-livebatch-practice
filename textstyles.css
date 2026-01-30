@@ -1,0 +1,29 @@
+p {
+  background-color: blue;
+  color: black;
+
+  text-align: left;
+  text-indent: 100px;
+  line-height: 30px;
+  width: 300px;
+}
+
+img {
+  width: 40px;
+  height: 30px;
+  vertical-align: base-line;
+}
+
+span {
+  font-size: 50px;
+  text-decoration-line: underline;
+  text-decoration-color: blueviolet;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 5px;
+  text-transform: uppercase;
+
+  letter-spacing: 5px;
+  word-spacing: 50px;
+
+  text-shadow: 2px 3px 5px red;
+}

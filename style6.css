@@ -1,0 +1,17 @@
+html {
+  font-size: 5px;
+}
+body {
+  font-size: 10px;
+}
+
+div {
+  font-size: 15px;
+}
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 100;
+
+  font-size: 2vw;
+}

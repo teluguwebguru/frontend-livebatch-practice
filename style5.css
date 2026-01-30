@@ -1,0 +1,7 @@
+a[target="_blank"] {
+  background-color: grey;
+}
+
+p[name$="spl"] {
+  color: green;
+}

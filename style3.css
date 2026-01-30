@@ -1,0 +1,28 @@
+a:link {
+  color: red;
+}
+
+a:hover {
+  color: blue;
+}
+
+a:visited {
+  color: green;
+}
+
+a:active {
+  color: chocolate;
+}
+
+div:hover {
+  color: red;
+  background-color: yellow;
+}
+
+input:focus {
+  background-color: yellow;
+}
+
+p:first-child {
+  color: violet;
+}

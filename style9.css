@@ -1,0 +1,26 @@
+table {
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  width: 80%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: blue;
+  color: white;
+}
+
+td {
+  padding: 3px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: lightblue;
+}
+tr:hover {
+  background-color: lightgreen;
+}
+tr {
+  border-bottom: 1px solid lightgray;
+}

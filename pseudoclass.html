@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pseudo Clas selectors program</title>
+    <link rel="stylesheet" href="style3.css" />
+  </head>
+
+  <body>
+    <a href="webpage1.html">first link</a><br />
+    <a href="webpage2.html">second link</a><br />
+    <a href="webpage3.html">third link</a><br />
+
+    <div>
+      <p>welcome to our program.</p>
+      <p>This is TWG Platform.</p>
+    </div>
+    <br />
+
+    <form action="getdata.py" method="GET" autocomplete="on">
+      <label for="un">Username:</label><sup>*</sup>
+      <input
+        id="un"
+        name="uname"
+        type="text"
+        placeholder="letters+digits"
+        required
+      /><br />
+
+      <label for="fn">Full Name:</label>
+      <input type="text" id="fn" name="fullname" /><br />
+
+      <label for="pwd">Password:</label><sup>*</sup>
+      <input
+        type="password"
+        id="pwd"
+        name="password"
+        value="twg123"
+        readonly
+      /><br />
+
+      Gender:
+
+      <input type="radio" id="m" name="gender" />
+      <label for="m">Male</label>
+
+      <input type="radio" id="f" name="gender" />
+      <label for="f">Female</label> <br />
+
+      Languages Known:
+      <input type="checkbox" id="t" name="tel" />
+      <label for="t">Telugu</label>
+
+      <input type="checkbox" id="e" name="eng" />
+      <label for="e">English</label>
+
+      <input type="checkbox" id="h" name="hin" />
+      <label for="h">Hindi</label><br />
+
+      <label for="em">Email ID:</label>
+      <input type="email" id="em" name="email" autofocus /><br />
+
+      <label for="mob">Mobile:</label>
+      <input type="tel" id="mob" name="mobile" placeholder="+91-7013484024" />
+
+      <br />
+      <fieldset>
+        <legend>DOB</legend>
+        <label for="dob">Date of Birth:</label>
+        <input
+          type="date"
+          id="dob"
+          name="birthdate"
+          min="2000-01-01"
+          max="2010-12-31"
+        /><br />
+
+        <label for="tob">Time of Birth:</label>
+        <input type="time" id="tob" name="birthtime" />
+      </fieldset>
+
+      <br />
+
+      <label for="proflink">Profile URL</label>
+      <input type="url" id="proflink" name="profile" /><br />
+
+      <label for="c">Favorite Color:</label>
+      <input type="color" id="c" name="clr" /><br />
+
+      <label for="b">How many cricket bats required:</label>
+      <input type="range" min="0" max="5" id="b" name="bat" /><br />
+
+      <label for="addr">Address</label>
+      <textarea rows="5" cols="30"> </textarea>
+      <br />
+
+      <label for="cntry">country</label>
+      <select id="cntry" name="country">
+        <option>IN</option>
+        <option>US</option>
+        <option>UK</option></select
+      ><br />
+
+      <label for="fc">mention favorite color for gift:</label>
+      <input list="clrs" id="fc" name-="fc" />
+
+      <datalist id="clrs">
+        <option value="Red"></option>
+        <option value="Green"></option>
+        <option value="Blue"></option>
+      </datalist>
+
+      <br />
+
+      <label for="cv">Upload CV:</label>
+      <input type="file" id="cv" name="cv" multiple /><br />
+
+      <input type="reset" />
+
+      <input type="submit" value="Register" />
+    </form>
+  </body>
+</html>

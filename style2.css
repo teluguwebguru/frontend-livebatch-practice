@@ -1,0 +1,7 @@
+div ~ p {
+  color: red;
+}
+
+section + p {
+  color: green;
+}

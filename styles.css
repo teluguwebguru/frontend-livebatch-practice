@@ -1,0 +1,50 @@
+/*   id has highest priority than all other selectors   */
+
+* {
+  margin: 0px;
+}
+body {
+  background-color: lightgrey;
+
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+#hel1 {
+  background-color: Grey;
+}
+
+h1 {
+  color: rgb(20, 100, 200);
+  border: 1px solid red;
+
+  margin: 30px;
+
+  padding: 5px 20px 5px 20px;
+  width: 30%;
+  height: 200px;
+  box-sizing: content-box;
+}
+
+h2 {
+  border: red dashed 3px;
+  margin: 70px;
+}
+
+p {
+  color: blue;
+}
+
+#head1 {
+  background-color: Yellow;
+}
+
+.c1 {
+  background-color: green;
+}
+
+.c2 {
+  background-color: purple;
+}

@@ -1,0 +1,36 @@
+nav {
+  border: 0px solid grey;
+}
+ol {
+  list-style-type: upper-alpha;
+}
+
+ul.hobbies {
+  list-style-image: url("images/smalllogo.png");
+  list-style-position: outside;
+  background-color: grey;
+}
+
+ul.hobbies li {
+  color: red;
+  background-color: yellow;
+  padding: 3px;
+}
+
+ul.menu {
+}
+
+ul.menu li {
+  list-style-type: none;
+  display: inline;
+  padding-right: 205px;
+}
+
+ul.menu li a {
+  text-decoration: none;
+}
+
+ul.menu li a:hover {
+  background-color: red;
+  color: white;
+}
