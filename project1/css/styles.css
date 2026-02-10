@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.myheader {
+  width: 100%;
+  height: 200px;
+  border-bottom: 3px solid grey;
+  position: sticky;
+  display: block;
+}
+
+img {
+  width: 80px;
+  height: 60px;
+}
+
+.eventdate {
+  background-color: rgb(136, 129, 129);
+  width: 100%;
+  height: 50px;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  font-weight: 500;
+}
+
+.hcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 0px 12px;
+  height: 148px;
+  background-color: rgb(180, 175, 175);
+}
+
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  display: inline;
+  padding: 0px 10px;
+}
+
+nav ul li a {
+  display: inline;
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  color: rgb(226, 97, 50);
+  border-bottom: 3px solid rgb(226, 97, 50);
+
+  font-weight: bold;
+}
+
+nav ul li a.active {
+  color: rgb(226, 97, 50);
+  border-bottom: 3px solid rgb(226, 97, 50);
+
+  font-weight: bold;
+}
+
+.section1 {
+  background-image: url("../images/banner.jpg");
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.section1-h1 {
+  font-size: 5em;
+  color: rgb(245 126 3);
+}
+.section1-caption {
+  color: white;
+  font-size: 3em;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+.section1-btn {
+  background-color: rgb(245 126 3);
+  padding: 10px;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: white;
+  border-radius: 10px;
+}
+.section1-eventdate {
+  font-size: 1.5em;
+  color: white;
+  font-weight: 500;
+}
+
+.sechead {
+  color: rgb(245 126 3);
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+.sectext {
+  font-size: 2em;
+  height: 200px;
+  text-align: justify;
+}
+
+.section2 {
+  margin-top: 40px;
+  gap: 20px;
+  height: 300px;
+}
+
+.swidth {
+  width: 50%;
+  text-wrap: wrap;
+}
+.greybg {
+  background-color: rgb(208, 209, 210);
+}
+
+.section3 {
+  height: 930px;
+  padding-top: 30px;
+}
+.section3-div2 {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.s3grid-item {
+  width: 200px;
+  height: 300px;
+  text-align: center;
+}
+
+.section4 {
+  margin-top: 70px;
+  height: 400px;
+}
+
+@media screen and (max-width: 700px) {
+  .section1 {
+    height: 900px;
+    text-wrap: wrap;
+    flex-wrap: wrap;
+    background-color: black;
+  }
+
+  .section2 {
+    height: 500px;
+    position: relative;
+  }
+
+  .section3 {
+    position: relative;
+    margin-top: 150px;
+    height: 1400px;
+  }
+
+  .section3-div2 {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .sectext {
+    text-align: center;
+  }
+}
