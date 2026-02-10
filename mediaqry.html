@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Media Queries Example program</title>
+    <!--Responsive web design-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!--character set-->
+    <meta charset="UTF-8" />
+
+    <!--search engine optimization-->
+    <meta
+      name="description"
+      content="this is the best source to learn media queries concept in css in telugu."
+    />
+    <meta name="keywords" content="html,css,javascript,frontend" />
+    <meta name="author" cotnent="teluguwebguru" />
+
+    <style type="text/css">
+      .mydiv {
+        background-color: rgb(103, 141, 217);
+        height: 300px;
+        width: 800px;
+        border: 5px solid black;
+      }
+      .mydiv2 {
+        background-color: rgb(212, 125, 187);
+        height: 400px;
+        width: 600px;
+        border: 5px solid purple;
+      }
+
+      @media screen and (max-width: 400px) {
+        .mydiv {
+          background-color: red;
+          width: 350px;
+          height: 500px;
+          font-size: 18px;
+        }
+        .mydiv2 {
+          background-color: black;
+          color: white;
+          font-size: 30px;
+        }
+      }
+
+      @media screen and (min-width: 401px) and (max-width: 800px) {
+        .mydiv {
+          background-color: brown;
+        }
+        .mydiv2 {
+          background-color: yellowgreen;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="mydiv">
+      <h1>Welcome to teluguwebguru</h1>
+      <p>
+        This is the best place to learn software courses in telugu.This is the
+        best place to learn software courses in teluguThis is the best place to
+        learn software courses in teluguThis is the best place to learn software
+        courses in teluguThis is the best place to learn software courses in
+        teluguThis is the best place to learn software courses in teluguThis is
+        the best place to learn software courses in teluguThis is the best place
+        to learn software courses in telugu<br />
+        <br />
+        ఎలా ఉన్నారు
+      </p>
+      <button>Courses</button>
+    </div>
+    <br />
+    <div class="mydiv2">i am div2</div>
+  </body>
+</html>

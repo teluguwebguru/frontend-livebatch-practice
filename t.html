@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Flex example</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <style type="text/css">
+      * {
+        border: 1px solid grey;
+      }
+      body {
+        display: grid;
+        grid-template-areas:
+          "myheader mynav mynav mynav mynav mycontact"
+          "mycontent mycontent mycontent mycontent mycontent mycontent"
+          "myfooter  myfooter myfooter myfooter myfooter myfooter";
+        gap: 10px;
+        border: 3px solid green;
+        min-height: 500px;
+        align-items: self-start;
+      }
+
+      img {
+        width: 50px;
+        height: 30px;
+      }
+      .header {
+        grid-area: myheader;
+        align-items: center;
+      }
+      .navmenu {
+        grid-area: mynav;
+      }
+      .content {
+        grid-area: mycontent;
+      }
+      .footer {
+        grid-area: myfooter;
+      }
+      .cont {
+        grid-area: mycontact;
+        justify-self: end;
+      }
+      .flx {
+        display: flex;
+        justify-content: flex-start;
+        align-content: flex-start;
+      }
+      .heading {
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header flx">
+      <div><img src="images/logo.png" /></div>
+      <div class="heading">Telugu Web Guru</div>
+    </div>
+    <nav class="navmenu">home courses contactme success-stories</nav>
+    <div class="cont"><button>LOGIN</button></div>
+    <div class="content">
+      <p>
+        Hello there! My name is Santosh Raju Dabbiru, and I'm thrilled to be
+        your trainer on this exciting journey of software training. With over 17
+        years of experience in the industry & Teaching, I've had the pleasure of
+        working on a wide range of software projects and trained thousands of
+        members on various technologies. Throughout my career, I've developed a
+        strong passion for sharing my knowledge and helping others unlock their
+        full potential in the world of software development.
+      </p>
+    </div>
+    <div class="footer">All rights reserved</div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+/*  this css is written for positionex.html    */
+div {
+  position: relative;
+  top: 100px;
+  left: 100px;
+  border: 1px solid red;
+}
+
+.grandparent {
+  border: 1px solid green;
+  width: 700px;
+  height: 500px;
+}
+
+.parent {
+  border: 1px solid blue;
+  width: 500px;
+  height: 300px;
+}
+
+/*p {
+  position: absolute;
+  left: 150px;
+  border: 1px solid purple;
+}*/
+
+div.fix {
+  position: sticky;
+  top: 0;
+  background-color: brown;
+  color: white;
+}

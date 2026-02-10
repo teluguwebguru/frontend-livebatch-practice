@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Forms styles</title>
+    <link rel="stylesheet" href="style14.css" />
+  </head>
+
+  <body>
+    <h1>Teluguwebguru LOGIN Form</h1>
+
+    <form action="getdata.py" method="GET" autocomplete="on">
+      <label for="un">Username:</label>
+      <input
+        id="un"
+        name="uname"
+        type="text"
+        placeholder="letters+digits"
+        required
+      /><br />
+
+      <label for="pwd">Password:</label>
+      <input
+        type="password"
+        id="pwd"
+        name="password"
+        value="twg123"
+        readonly
+      /><br /><br />
+
+      <input type="reset" />
+
+      <input type="submit" value="Register" />
+    </form>
+  </body>
+</html>

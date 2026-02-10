@@ -1,0 +1,17 @@
+div {
+  border: 1px solid blue;
+}
+
+a {
+  display: block;
+  border: 1px solid green;
+}
+
+h1 {
+  display: none;
+}
+
+div.spl {
+  border: 3px solid red;
+  max-width: 400px;
+}

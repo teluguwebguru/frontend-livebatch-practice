@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Flex example</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <style type="text/css">
+      div.gcon {
+        display: grid;
+        grid-template-areas:
+          "myheader myheader myheader mynav mynav"
+          "mycontent mycontent mycontent mycontent mycontent"
+          "myfooter  myfooter myfooter myfooter myfooter";
+        gap: 10px;
+      }
+
+      img {
+        width: 80px;
+        height: 50px;
+      }
+      .header {
+        grid-area: myheader;
+      }
+      .navmenu {
+        grid-area: mynav;
+      }
+      .content {
+        grid-area: mycontent;
+      }
+      .footer {
+        grid-area: myfooter;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="gcon">
+      <div class="header">
+        <img src="images/logo.png" />
+        TeluguWebGuru
+      </div>
+      <nav class="navmenu">home courses contactme success-stories</nav>
+
+      <div class="content">
+        <p>
+          Hello there! My name is Santosh Raju Dabbiru, and I'm thrilled to be
+          your trainer on this exciting journey of software training. With over
+          17 years of experience in the industry & Teaching, I've had the
+          pleasure of working on a wide range of software projects and trained
+          thousands of members on various technologies. Throughout my career,
+          I've developed a strong passion for sharing my knowledge and helping
+          others unlock their full potential in the world of software
+          development.
+        </p>
+      </div>
+      <div class="footer">All rights reserved</div>
+    </div>
+    <br />
+  </body>
+</html>
