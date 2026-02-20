@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Animations example</title>
+    <style type="text/css">
+      @keyframes myanimation {
+        0% {
+          background-color: yellow;
+          color: black;
+          left: 0;
+          top: 0;
+        }
+        25% {
+          background-color: red;
+          color: white;
+          left: 100px;
+          top: 100px;
+        }
+        50% {
+          background-color: green;
+          color: yellow;
+          left: 300px;
+          top: 300px;
+        }
+
+        75% {
+          background-color: purple;
+          color: blue;
+          left: 500px;
+          top: 500px;
+        }
+        100% {
+          background-color: black;
+          color: white;
+          left: 600px;
+          top: 600px;
+        }
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        color: black;
+        animation-name: myanimation;
+        animation-duration: 10s;
+        position: relative;
+        left: 0px;
+        top: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>hello welcome to teluguwebguru</div>
+  </body>
+</html>
