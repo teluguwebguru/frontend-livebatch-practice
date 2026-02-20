@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.boldtext {
+  font-weight: 800;
+}
+
+img {
+  width: 80px;
+  height: 60px;
+}
+
+.eventdate {
+  background-color: rgb(136, 129, 129);
+}
+
+.hcontainer {
+  background-color: rgb(180, 175, 175);
+}
+
+.orangecolor {
+  color: rgb(245 126 3);
+}
+
+.textwhite {
+  color: white;
+}
+
+a.nav-link {
+  color: black;
+}
+a.nav-link:hover {
+  color: rgb(226, 97, 50);
+  border-bottom: 3px solid rgb(226, 97, 50);
+
+  font-weight: bold;
+}
+
+a.active {
+  color: rgb(226, 97, 50);
+  border-bottom: 3px solid rgb(226, 97, 50);
+  font-weight: bold;
+}
+
+.section1 {
+  background-image: url("../images/banner.jpg");
+  padding-top: 15%;
+}
+.section1-h1 {
+  color: rgb(245 126 3);
+}
+
+.section1-btn {
+  background-color: rgb(245 126 3);
+}
+
+.sechead {
+  color: rgb(245 126 3);
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+.sectext {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.greybg {
+  background-color: rgb(208, 209, 210);
+}
+
+.mylist {
+  list-style-type: none;
+  position: relative;
+  counter-reset: step-counter; /*step-1: step-counter=0*/
+}
+
+.mylist li {
+  counter-increment: step-counter; /*step-counter=step-counter+1*/
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.mylist li::before {
+  position: absolute;
+  content: counter(
+    step-counter
+  ); /*adding step-counter value as marker to the list item*/
+  left: -1.5em;
+  width: 1em;
+  color: rgb(245 126 3);
+  border: 1px solid rgb(245 126 3);
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.footer-sec2 {
+  background-color: grey;
+}
+
+.register-main {
+  height: 900px;
+}
+
+.reg-form {
+  margin-top: 100px 0px;
+  width: 750px;
+  margin: 0 auto auto;
+  border: 0px solid red;
+}
+
+.reg-form label {
+  display: block;
+  font-size: 20px;
+  width: 100%;
+}
+.reg-form div {
+  width: 100%;
+}
+
+.reg-form .sp {
+  width: 100%;
+  margin-right: 10px;
+}
+
+.star {
+  color: red;
+  font-size: 18px;
+}
+.reg-form input {
+  padding: 10px;
+  height: 40px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.reg-form input[type="checkbox"] {
+  display: inline;
+  width: 20px;
+}
+
+.reg-form input[type="submit"] {
+  background-color: rgb(47, 189, 47);
+  color: whitesmoke;
+}
+.nametitle {
+  height: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  .section1 {
+    height: 900px;
+    text-wrap: wrap;
+    flex-wrap: wrap;
+    background-color: black;
+  }
+
+  .section2 {
+    height: 500px;
+    position: relative;
+  }
+
+  .section3 {
+    position: relative;
+    margin-top: 150px;
+    height: 1400px;
+  }
+
+  .section3-div2 {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .sectext {
+    text-align: center;
+  }
+  .reg-form {
+    width: 400px;
+  }
+}
