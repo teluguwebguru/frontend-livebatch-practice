@@ -17,6 +17,13 @@
   align-items: center;
   gap: 10px;
 }
+.align-center {
+  text-align: center;
+}
+
+.boldtext {
+  font-weight: 800;
+}
 
 .myheader {
   width: 100%;
@@ -24,6 +31,7 @@
   border-bottom: 3px solid grey;
   position: sticky;
   display: block;
+  top: 0px;
 }
 
 img {
@@ -66,6 +74,26 @@ nav ul li a {
   text-decoration: none;
   color: black;
   padding: 10px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+.orangecolor {
+  color: rgb(245 126 3);
+}
+
+.textwhite {
+  color: white;
 }
 
 nav ul li a:hover {
@@ -131,7 +159,7 @@ nav ul li a.active {
 
 .sectext {
   font-size: 2em;
-  height: 200px;
+
   text-align: justify;
 }
 
@@ -159,17 +187,162 @@ nav ul li a.active {
   grid-template-columns: auto auto auto auto;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
+  width: 80%;
 }
 .s3grid-item {
-  width: 200px;
+  width: 400px;
   height: 300px;
   text-align: center;
+  font-size: 1em;
+  border: 1px solid gray;
 }
 
 .section4 {
   margin-top: 70px;
   height: 400px;
+}
+
+.section5 {
+  height: 530px;
+  padding-top: 30px;
+}
+.section5-div2 {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 80%;
+}
+.s5grid-item {
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  font-size: 1em;
+  border: 1px solid gray;
+}
+
+.section6 {
+  margin-top: 30px;
+  height: 500px;
+}
+
+.s6-maindiv {
+  width: 70%;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.s6-div {
+  width: 400px;
+  border: 1px solid grey;
+}
+
+.mylist {
+  list-style-type: none;
+  position: relative;
+  counter-reset: step-counter; /*step-1: step-counter=0*/
+}
+
+.mylist li {
+  counter-increment: step-counter; /*step-counter=step-counter+1*/
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.mylist li::before {
+  position: absolute;
+  content: counter(
+    step-counter
+  ); /*adding step-counter value as marker to the list item*/
+  left: -1.5em;
+  width: 1em;
+  color: rgb(245 126 3);
+  border: 1px solid rgb(245 126 3);
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  bottom: 0;
+  gap: 0px;
+}
+.footer-sec1 {
+  background-color: black;
+  height: 400px;
+  width: 100%;
+  justify-content: space-between;
+}
+.footer-sec2 {
+  background-color: grey;
+  height: 100px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer-section1-left {
+  width: 55%;
+  padding: 1em;
+}
+.footer-section1-right {
+  width: 45%;
+
+  text-align: right;
+  padding-right: 20px;
+}
+
+.register-main {
+  height: 900px;
+}
+
+.reg-form {
+  margin-top: 100px 0px;
+  width: 750px;
+  margin: 0 auto auto;
+  border: 0px solid red;
+}
+
+.reg-form label {
+  display: block;
+  font-size: 20px;
+  width: 100%;
+}
+.reg-form div {
+  width: 100%;
+}
+
+.reg-form .sp {
+  width: 100%;
+  margin-right: 10px;
+}
+
+.star {
+  color: red;
+  font-size: 18px;
+}
+.reg-form input {
+  padding: 10px;
+  height: 40px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.reg-form input[type="checkbox"] {
+  display: inline;
+  width: 20px;
+}
+
+.reg-form input[type="submit"] {
+  background-color: rgb(47, 189, 47);
+  color: whitesmoke;
+}
+.nametitle {
+  height: 50px;
 }
 
 @media screen and (max-width: 700px) {
@@ -200,5 +373,8 @@ nav ul li a.active {
   }
   .sectext {
     text-align: center;
+  }
+  .reg-form {
+    width: 400px;
   }
 }
