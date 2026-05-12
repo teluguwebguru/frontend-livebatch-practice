@@ -1,0 +1,27 @@
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Javascript ex1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+    <script>
+      //this code checks whether x is bigger than both y and z or not
+      function f() {
+        let x = parseInt(document.getElementById("x").value);
+        let y = parseInt(document.getElementById("y").value);
+
+        x > y ? window.alert("x is big") : window.alert("y is big");
+
+        let z = x > y ? x : y;
+        window.alert(z);
+      }
+    </script>
+  </head>
+  <body>
+    Enter x Value: <input type="text" id="x" /><br />
+    Enter y Value: <input type="text" id="y" /><br />
+    <button onclick="f()">Submit</button>
+  </body>
+</html>

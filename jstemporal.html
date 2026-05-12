@@ -1,0 +1,56 @@
+<!--program to demonstrate Temporal object in javascript-->
+
+<!--Javascript Objects-->
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Temporal Date in Javascript examples</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <script>
+      const d1 = Temporal.Now.plainDateTimeISO().toString();
+      console.log("d1:" + d1);
+
+      const d2 = Temporal.Now.plainDateISO().toString();
+      console.log("d2:" + d2);
+
+      const d3 = Temporal.Now.instant(); //instant always follows UTC
+      console.log("d3:" + d3.toString());
+
+      const d4 = Temporal.Instant.from(
+        "2025-01-10T10:12:18.402870117Z",
+      ).toString();
+      console.log("d4:" + d4);
+
+      const d5 = Temporal.PlainDate.from("2005-02-06");
+      console.log("d5:" + d5.toString());
+
+      const d6 = Temporal.PlainTime.from("10:45:15");
+      console.log("d6:" + d6.toString());
+
+      const d7 = Temporal.PlainDate.from("2005-02-06T11:38:14");
+      console.log("d7:" + d7.toString());
+
+      const d8 = Temporal.ZonedDateTime.from(
+        "2004-04-23T09:12:45+05:30[Asia/Kolkata]",
+      );
+      console.log("d8:" + d8.toString());
+
+      const d9 = Temporal.Duration.from({ days: 5, hours: 10, minutes: 30 });
+      console.log("d9:" + d9.toString());
+
+      console.log(
+        "d8 after 2 months 15 days:" +
+          d8.add({ months: 2, days: 15 }).toString(),
+      );
+
+      // d8 = d7;
+
+      console.log("d8 after arithmetic:" + d8.toString()); //temporal immutable
+    </script>
+  </body>
+</html>

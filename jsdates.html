@@ -1,0 +1,53 @@
+<!--Javascript Objects-->
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Date in Javascript examples</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <script>
+      const d1 = new Date();
+      console.log(`d1 is: ${d1}`);
+
+      //creating date object with custom date value
+      const d2 = new Date("2026-03-09");
+      d2.setDate("14"); //mutable
+
+      console.log(`d2 is: ${d2}`);
+
+      const d3 = new Date("2020", "11", "23", "10", "25", "33", "20"); //month starts from 0
+      console.log(`d3 is: ${d3}`);
+
+      const d4 = new Date("2020", "11");
+      console.log(`d4 is: ${d4}`);
+
+      const d5 = new Date("03/09/2026");
+      console.log(`d5 is: ${d5}`);
+
+      console.log("year in d5 is:" + d5.getFullYear());
+      console.log("month in d5 is:" + d5.getMonth());
+      console.log(
+        "dd/mm/yyyy of d5 is:" +
+          d5.getDate() +
+          "/" +
+          (d5.getMonth() + 1) +
+          "/" +
+          d5.getFullYear(),
+      );
+
+      d5.setHours(15);
+      d5.setFullYear(2024);
+      console.log(d5);
+
+      const d6 = d5.toString();
+      console.log(`d6  is: ${d6}`);
+
+      const d7 = d5.toUTCString();
+      console.log(`d7  is: ${d7}`);
+    </script>
+  </body>
+</html>

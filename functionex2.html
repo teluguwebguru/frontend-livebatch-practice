@@ -1,0 +1,50 @@
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>functions ex1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="mystyles.css" />
+  </head>
+  <body>
+    <script>
+      //functions --> reusable code blocks
+      function addxy(a, b) {
+        let x = a;
+        let y = b;
+        let z = x + y;
+        console.log(z);
+      }
+
+      //reusing first time
+      addxy(15, 20); //15+20
+
+      let p = "TWG";
+      let q = " JavaScript Course";
+      console.log(p + q);
+
+      //reusing second time
+      addxy(30, 40); //30+40
+
+      console.log("welcome to functions concept in javascript");
+
+      //reusing third time
+      let v1 = 78;
+      let v2 = 96;
+      addxy(v1, v2); //78+96
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

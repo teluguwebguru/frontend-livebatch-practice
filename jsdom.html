@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>first html doc</title>
+  </head>
+
+  <body>
+    <p class="myclass">I am paragraph</p>
+    <h2 id="spl">I am h2 element</h2>
+    <p>I am second paragraph</p>
+    <a href="twg.html" class="myclass">twg</a>
+    <div class="myclass">i am div</div>
+
+    <button onclick="f()">click me</button>
+
+    <script>
+      function f() {
+        //document.getElementById("spl").innerHTML = "hello";
+        //const myelements = document.getElementsByClassName("myclass");
+
+        //const myelements = document.getElementsByTagName("p");
+
+        const myelements = document.querySelectorAll(".myclass");
+
+        console.log(myelements);
+        myelements[0].innerHTML = "I am updating this text";
+        myelements[0].style.color = "red";
+      }
+    </script>
+  </body>
+</html>

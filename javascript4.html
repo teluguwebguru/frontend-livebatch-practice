@@ -1,0 +1,36 @@
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Javascript ex1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+
+    <script src="myjsfile1.js"></script>
+  </head>
+  <body>
+    Value1: <input type="text" id="value1" name="value1" /><br />
+    Value2: <input type="text" id="value2" name="value2" /><br /><br />
+
+    <button onclick="fequal()">==</button>
+    <button onclick="fequalwithtype()">===</button>
+    <button onclick="fnotequal()">!=</button>
+    <button onclick="fnotequalwithtype()">!==</button>
+    <button onclick="fgt()">&gt;</button>
+    <button onclick="flt()">&lt;</button>
+    <button onclick="fgte()">&gt;=</button>
+    <button onclick="flte()">&lt;=</button>
+
+    <br /><br />
+    Result <input type="text" id="res" name="res" /><br />
+
+    <script>
+      let x = 21;
+      let y = 20;
+      let z = 25;
+
+      window.alert(!(x < y));
+    </script>
+  </body>
+</html>

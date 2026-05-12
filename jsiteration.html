@@ -1,0 +1,108 @@
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Javascript Array example-1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <script>
+      //forEach
+      const ages = [14, 18, 1, 12, 20, 2, 25, 34];
+      let sum = 0;
+      ages.forEach(printElements);
+
+      function printElements(value, index, array) {
+        sum += value;
+      }
+      console.log(sum);
+
+      //map
+      const ages1 = ages.map(addOne);
+
+      function addOne(value, index, array) {
+        return value + 1;
+      }
+
+      console.log(ages1.toString());
+
+      //filter
+      const ages2 = ages.filter(checkLicenseEligibility);
+
+      function checkLicenseEligibility(value, index, array) {
+        return value >= 18;
+      }
+
+      console.log(ages2.toString());
+
+      //every
+      let res2 = ages.every(checkLicenseEligibility);
+      console.log("every() function result is :" + res2);
+
+      //some
+      let res3 = ages.some(checkLicenseEligibility);
+      console.log("some() function result is :" + res3);
+
+      //reduce
+      let sumofvalues = ages.reduce(calcSum);
+
+      function calcSum(s, value, index, array) {
+        return s + value;
+      }
+
+      console.log(sumofvalues);
+
+      //reduce for strings
+      const courses = ["Python", "JavaScript", "Java"];
+      let res = courses.reduce(doConcat);
+
+      function doConcat(r, value, index, array) {
+        return r.concat(value);
+      }
+
+      console.log(res);
+
+      //reduceRight
+      let res1 = courses.reduceRight(doConcat);
+      console.log(res1);
+
+      //from
+      const charray = Array.from("teluguwebguru " + "channel");
+      console.log(charray);
+
+      //keys
+      const keyages = ages.keys();
+      for (let i of keyages) {
+        console.log(i);
+      }
+
+      //entries
+      const entriesages = ages.entries();
+      for (let i of entriesages) {
+        console.log(i);
+      }
+
+      //spread ...
+      const ar1 = [10, 20, 30, 10];
+
+      console.log("ar1:" + ar1);
+      const ar2 = [40, 50, 60];
+
+      const ar3 = ar1.concat(ar2);
+      console.log(ar3);
+
+      const ar4 = [...ar1, ...ar2];
+      console.log(ar4);
+
+      //rest
+      const ar5 = [10, 20, 30, 40, 50, 60];
+      [x, y, z, ...rest] = ar5;
+      console.log(x);
+      console.log(y);
+      console.log(z);
+      console.log(rest);
+    </script>
+  </body>
+</html>

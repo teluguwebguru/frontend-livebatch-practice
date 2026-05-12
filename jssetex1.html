@@ -1,0 +1,76 @@
+<!--Javascript Objects-->
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Set in Javascript ex</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <div id="studname" class="h3"></div>
+
+    <script>
+      //set with elements
+      const x = new Set([10, 20, 30, 10]);
+      console.log(x);
+      x.add(40);
+      console.log(x);
+      //set without elements
+      const y = new Set();
+      console.log(y);
+
+      y.add(11);
+      y.add(22);
+      y.add(33);
+
+      console.log(y);
+
+      //clear
+      y.clear();
+      console.log(y);
+
+      y.add(11);
+      y.add(22);
+      y.add(33);
+      console.log(y);
+
+      //has
+      let res = y.has(22);
+      console.log(res);
+
+      res = y.has(32);
+      console.log(res);
+
+      let sum = 0;
+      //forEach
+      y.forEach(func);
+
+      function func(value) {
+        sum += value;
+      }
+
+      console.log("sum=" + sum);
+
+      //for-of through values()
+      //values() returns iterator of a set
+      const itr = y.values();
+      for (let i of itr) {
+        console.log(i);
+      }
+
+      //keys() - also returns values only because set does not maintain indexes
+      const itr1 = y.keys();
+      for (let i of itr1) {
+        console.log(i);
+      }
+
+      //entries()
+      const itr2 = y.entries();
+      for (let i of itr2) {
+        console.log(i);
+      }
+    </script>
+  </body>
+</html>

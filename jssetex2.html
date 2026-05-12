@@ -1,0 +1,64 @@
+<!--Javascript Objects-->
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Set in Javascript ex</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <div id="studname" class="h3"></div>
+
+    <script>
+      //set with elements
+      const x = new Set([10, 20, 30, 40, 50]);
+      console.log(x);
+
+      const y = new Set([30, 35, 50, 55]);
+      console.log(y);
+
+      //union
+      console.log(x.union(y));
+
+      //intersection
+      console.log(x.intersection(y));
+
+      //difference
+      console.log(x.difference(y));
+      console.log(y.difference(x));
+
+      //isDisjointFrom()
+      console.log(x.isDisjointFrom(y));
+      const z = new Set([65, 75]);
+      console.log(x.isDisjointFrom(z));
+
+      //symmetricDifference()
+      console.log(x.symmetricDifference(y));
+
+      const s1 = new Set([10, 20, 65, 69, 72, 75, 87]);
+      const s2 = new Set([65, 75]);
+
+      //isSubsetOf()
+      console.log(s1.isSubsetOf(s2));
+      console.log(s2.isSubsetOf(s1));
+
+      //isSupersetOf()
+      console.log(s1.isSupersetOf(s2));
+      console.log(s2.isSupersetOf(s1));
+
+      let ws1 = new WeakSet();
+
+      //its values must be objects
+      let ob1 = { v1: 10, v2: 20 };
+      console.log(ob1["v2"]);
+
+      ws1.add(ob1);
+
+      console.log(ws1);
+
+      ws1 = null;
+    </script>
+  </body>
+</html>

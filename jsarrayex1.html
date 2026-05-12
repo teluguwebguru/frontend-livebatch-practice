@@ -1,0 +1,115 @@
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Javascript Array example-1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <script>
+      //first way to create array
+      const courses = ["Python", "JavaScript", "Java"];
+      console.log(courses[1]);
+
+      //second way to create arrays
+      const ages = new Array(10, 20, 30, 40);
+      console.log(ages[2]);
+
+      //length property - to find length of an array
+      console.log(ages.length);
+
+      //array methods
+
+      //toString() - array -> string
+      const s1 = ages.toString();
+      console.log(s1);
+
+      const courseslist = courses.toString();
+      console.log("List of courses available:" + courseslist);
+
+      //at() - returns the element at particular index in given array
+      console.log(ages.at(2));
+
+      //join() - joins all elements in an array
+      const newages = ages.join("*");
+      console.log(newages);
+
+      //pop() - removes the last element from given array
+      ages.pop();
+      console.log(ages.toString());
+      ages.pop();
+      console.log(ages.toString());
+      ages.pop();
+      console.log(ages.toString());
+
+      //push() - adds new element at last of the array
+      ages.push(55);
+      console.log(ages.toString());
+
+      ages.push(45);
+      console.log(ages.toString());
+
+      ages.push(35);
+      console.log(ages.toString());
+
+      ages.push(25);
+      console.log(ages.toString());
+
+      //shift - removes first element from the array and shifts all other elements to a lower index
+      console.log("Before Shift:" + ages[0]);
+      ages.shift();
+      console.log("after Shift:" + ages[0]);
+
+      console.log(ages.toString());
+
+      //unshift - adds new element at the begining.
+      console.log("Before unShift:" + ages[0] + "," + ages[1]);
+      ages.unshift(99);
+      console.log("after unShift:" + ages[0] + "," + ages[1]);
+
+      console.log(ages.toString());
+
+      //update existing element in an array
+      ages[1] = 65;
+      console.log(ages.toString());
+
+      //isArray() - to check whether a variable is an array or not?
+      console.log(Array.isArray(ages));
+      let x = 10;
+      console.log(Array.isArray(x));
+
+      //delete() - to delete elements from an array
+      console.log("Before delete:" + ages.toString());
+      delete ages[1];
+      console.log("After delete:" + ages.toString());
+
+      console.log(ages[1]);
+      ages[1] = 11;
+      console.log(ages.toString());
+
+      //concat() -> merging arrays
+      const electronics = ["Laptop", "Desktop", "Washing Machine", "Refr"];
+      const furniture = ["Chair", "Table", "Sofa"];
+
+      const mythings = electronics.concat(furniture);
+      console.log(mythings.toString());
+
+      //copyWithin()  - copies array elements to another position in the same array
+
+      ages.copyWithin(4, 2);
+      console.log(ages.toString());
+
+      //flat -  to flatten the array
+      let y = [
+        [10, 20],
+        [30, 40],
+      ];
+
+      console.log(y[0]);
+      let y1 = y.flat();
+      console.log(y1.toString());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>window Example program</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="style6.css" />
+  </head>
+
+  <body>
+    <button onclick="f()">Click me</button>
+    <p id="spl"></p>
+
+    <script>
+      function f() {
+        // window.alert("welcome");
+        //window.confirm("Are you sure you want to exit?");
+        let a = window.prompt("Enter First Value");
+        let b = window.prompt("Enter Second Value");
+        document.getElementById("spl").innerHTML = parseInt(a) + parseInt(b);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!--this program shows driving license application for eligible candidates only-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Javascript ex1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+    <script>
+      //this code checks whether x is bigger than both y and z or not
+      function f() {
+        let age = parseInt(document.getElementById("age").value);
+        if (age >= 18) {
+          //show application
+          document.getElementById("licenseform").style.display = "block";
+        } else {
+          //alert the user about invalid age
+          window.alert("You are not eligible to apply for driving license");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Enter Your Age: <input type="text" id="age" /><br />
+
+    <button onclick="f()">Submit</button>
+    <br /><br />
+    <form style="display: none" id="licenseform">
+      <h1>Driving License Application</h1>
+      <br />
+      <label for="n">Full Name:</label><br />
+      <input type="text" id="n" name="n" /><br /><br />
+
+      <label for="a">Aadhar No:</label><br />
+      <input type="text" id="a" name="a" /><br /><br />
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </body>
+</html>

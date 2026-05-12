@@ -1,0 +1,38 @@
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Javascript Array example-1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <script>
+      //splice - we can add new items to an array
+      const courses = ["Python", "JavaScript", "Java", "Python", "Java", "PHP"];
+      console.log("Before searching:" + courses.toString());
+
+      //indexOf() --> -1 means item does not exist; if element exists -> first success index
+      let fi = courses.indexOf("Java");
+      console.log(fi);
+
+      //lastIndexOf()
+      let li = courses.lastIndexOf("Java");
+      console.log(li);
+
+      //includes - returns true or false
+      let inc = courses.includes("Python");
+      console.log(inc);
+
+      const ages = [14, 18, 12, 20, 25, 34];
+      let result = ages.findLastIndex(checkAge);
+
+      function checkAge(value, index, array) {
+        return value >= 18;
+      }
+
+      console.log("result of find:" + result.toString());
+    </script>
+  </body>
+</html>

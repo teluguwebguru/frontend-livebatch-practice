@@ -1,0 +1,43 @@
+<!--Javascript Objects-->
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Objects in Javascript ex</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <h1>Student Details</h1>
+    <div id="studname" class="h3"></div>
+
+    <script>
+      const emp1 = {
+        ename: "xyz",
+      };
+
+      const students1 = {
+        //properties
+        sname: "abc",
+        age: 20,
+        marks: 99,
+
+        //methods
+        read: function () {
+          return `Student ${this.sname} is reading`; //this refers to current object
+        },
+      };
+
+      let x = "";
+
+      for (let i in students1) {
+        x = x + students1[i];
+      }
+
+      document.getElementById("studname").innerHTML = `${x}`;
+
+      //console.log(student);
+    </script>
+  </body>
+</html>

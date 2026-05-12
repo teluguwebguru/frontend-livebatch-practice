@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JS Class Example program</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="style6.css" />
+  </head>
+
+  <body>
+    <script>
+      //creating class - template for its objects
+      class Student {
+        //it initializes objects
+        constructor(name, branch) {
+          this.name = name;
+          this.branch = branch;
+        }
+
+        show() {
+          return this.name + "," + this.branch;
+        }
+      }
+      //creating inheritance - sub class of Student
+      class Enggstudent extends Student {
+        constructor(name, branch, marks) {
+          super(name, branch);
+          this.marks = marks;
+        }
+
+        //it creates separate copy for every object
+        disp() {
+          return this.name + "," + this.branch + "," + this.marks;
+        }
+
+        //it is common to all objects - it is related to class
+        static sayhello() {
+          return "hello";
+        }
+      }
+
+      //creating objects of Student
+      const stud1 = new Student("abc", "CS");
+      const stud2 = new Student("def", "IT");
+      const stud3 = new Student("xyz", "ECE");
+
+      console.log("stud1:" + stud1.show());
+      console.log("stud2:" + stud2.show());
+      console.log("stud3:" + stud3.show());
+
+      //creating objects of Enggstudent
+      const estud1 = new Enggstudent("abc", "CS", 99);
+      const estud2 = new Enggstudent("def", "IT", 88);
+      const estud3 = new Enggstudent("xyz", "ECE", 77);
+
+      console.log("estud1 show from superclass Student:" + estud1.show());
+      console.log("estud1:" + estud1.disp());
+      console.log("estud2:" + estud2.disp());
+      console.log("estud3:" + estud3.disp());
+
+      console.log(Enggstudent.sayhello());
+    </script>
+  </body>
+</html>

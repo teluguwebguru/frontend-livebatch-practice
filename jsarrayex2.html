@@ -1,0 +1,30 @@
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Javascript Array example-1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <script>
+      //splice - we can add new items to an array
+      const courses = ["Python", "JavaScript", "Java"];
+      courses[3] = "PHP";
+
+      console.log("Before Splicing:" + courses.toString());
+
+      //remove 2 elements from index 1 and insert new elements
+      const courses1 = courses.toSpliced(1, 2, ".NET", "GO", "PERL");
+
+      console.log("After Splicing courses:" + courses.toString());
+      console.log("After Splicing courses1:" + courses1.toString());
+
+      //slicing - slicing out / extracting part of array
+      const courses2 = courses.slice(1, 3);
+      console.log("After Slicing courses:" + courses.toString());
+      console.log("After Slicing courses2:" + courses2.toString());
+    </script>
+  </body>
+</html>

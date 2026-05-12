@@ -1,0 +1,45 @@
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Javascript Array example-1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <script>
+      //sort - arrange elements in ascending order and modifies the original array
+      const ages = [14, 18, 12, 20, 25, 34];
+      console.log("Before sorting:" + ages.toString());
+
+      ages.sort(); //--> ascending order
+
+      console.log("After sorting ascending order:" + ages.toString());
+
+      ages.reverse();
+      console.log("After sorting descending order:" + ages.toString());
+
+      //toSorted() - same as sort but it wont modify the original array
+      const ages1 = [14, 18, 1, 12, 20, 2, 25, 34];
+      console.log("Before sorting ages1:" + ages1.toString());
+      const ages2 = ages1.toSorted();
+      console.log("After sorting ages1:" + ages1.toString());
+      console.log("After sorting ages2:" + ages2.toString());
+
+      //sorting as numbers
+      const ageswithcompare = ages1.toSorted(function (a, b) {
+        return a - b;
+      });
+
+      console.log(
+        "After sorting ageswithcompare:" + ageswithcompare.toString(),
+      );
+
+      //toReveresed()
+      const ages3 = ages2.toReversed();
+      console.log("After reverse ages2:" + ages2.toString());
+      console.log("After reverse ages3:" + ages3.toString());
+    </script>
+  </body>
+</html>

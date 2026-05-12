@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JS Class Example program</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="style6.css" />
+  </head>
+
+  <body>
+    <script>
+      //creating class - template for its objects
+      class Student {
+        //it initializes objects
+        constructor(name, branch, avg) {
+          this.name = name;
+          this.branch = branch;
+          this.avg = avg;
+        }
+
+        show() {
+          return this.name + "," + this.branch + "," + this.avg;
+        }
+      }
+
+      //creating objects
+      const stud1 = new Student("abc", "CS", 99);
+      const stud2 = new Student("def", "IT", 99);
+      const stud3 = new Student("xyz", "ECE", 99);
+
+      console.log("stud1:" + stud1.show());
+      console.log("stud2:" + stud2.show());
+      console.log("stud3:" + stud3.show());
+    </script>
+  </body>
+</html>

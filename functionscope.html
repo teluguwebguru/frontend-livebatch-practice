@@ -1,0 +1,29 @@
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Javascript ex3 - Assignment operators</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <script>
+      let x = 10; //global variables - let,var,const all are same
+      let y = x + 2;
+      function f() {
+        let z = 20; //function scope - let,var,const all are same
+
+        if (z > 10) {
+          let p = 30; //block scope - let,const are secured but var allows outside block also
+
+          window.alert("p inside block:" + p);
+        }
+
+        window.alert("p outside block:" + p);
+      }
+
+      f();
+    </script>
+  </body>
+</html>

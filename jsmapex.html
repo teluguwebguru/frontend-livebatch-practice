@@ -1,0 +1,122 @@
+<!--Javascript Objects-->
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Map example in Javascript</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <div id="studname" class="h3"></div>
+
+    <script>
+      //map with elements
+      const students = new Map([
+        ["s1", 99],
+        ["s2", 89],
+        ["s3", 90],
+      ]);
+
+      console.log(students.get("s1"));
+
+      students.set("s4", 77);
+      console.log(students.get("s4"));
+
+      students.set("s4", 55);
+      console.log("s4 is:" + students.get("s4"));
+
+      //empty map and then insert elements using set method
+      const employees = new Map();
+      employees.set("emp1", 100000);
+      employees.set(10, 75000);
+
+      //getting values of map by using get method
+      console.log(employees.get("emp1"));
+      console.log(employees.get(10));
+
+      //size property
+      console.log("size of employees map is:" + employees.size);
+      console.log("size of students map is:" + students.size);
+
+      //delete method - removes a map element
+      students.delete("s2");
+      console.log("size of students map after deleting s2 is:" + students.size);
+
+      //has() - key exists or not
+      console.log(
+        "whether s2 exists in students map or not:" + students.has("s2"),
+      );
+
+      //forEach
+      students.forEach(func);
+
+      function func(value, key) {
+        console.log("value of student with key " + key + " is:" + value);
+      }
+
+      //keys(),values(),entries()
+      keysitr = students.keys();
+      for (let i of keysitr) {
+        console.log(i);
+      }
+
+      valuesitr = students.values();
+      for (let i of valuesitr) {
+        console.log(i);
+      }
+
+      entriesitr = students.entries();
+      for (let i of entriesitr) {
+        console.log(i);
+      }
+
+      //using objects as keys
+      const person1 = { name: "santosh", age: 42, exp: 17 };
+      const person2 = { name: "Suresh", age: 32, exp: 12 };
+      const person3 = { name: "Ramesh", age: 22, exp: 9 };
+      const person4 = { name: "Mahesh", age: 25, exp: 10 };
+
+      const trainers = new Map();
+      trainers.set(person1, "Python");
+
+      console.log(trainers.get(person1));
+
+      keysitr = trainers.keys();
+      for (let i of keysitr) {
+        console.log(i["name"]);
+        console.log(i["age"]);
+      }
+
+      //groupBy() - groups the elements according to string values
+      const persons = [
+        { name: "santosh", age: 42, exp: 17 },
+        { name: "Suresh", age: 32, exp: 12 },
+        { name: "Ramesh", age: 22, exp: 10 },
+        { name: "Mahesh", age: 25, exp: 10 },
+      ];
+
+      const grp1gt10 = Map.groupBy(persons, funcn);
+
+      function funcn({ exp }) {
+        if (exp == 10) return "grp10";
+        else return "grpothers";
+      }
+
+      console.log(grp1gt10);
+      const res = grp1gt10.entries();
+      for (let i of res) {
+        console.log("group by:" + i);
+      }
+
+      //WeakMap - it must have objects as keys
+      let map1 = new WeakMap();
+      const s1 = { name: "abc" };
+
+      map1.set(s1, 10);
+
+      console.log(map1.get(s1));
+    </script>
+  </body>
+</html>

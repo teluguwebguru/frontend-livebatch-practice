@@ -1,0 +1,42 @@
+<!--Javascript Objects-->
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Object constructors in Javascript ex</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <h1>Student Details</h1>
+    <div id="studname" class="h3"></div>
+
+    <script>
+      //step-1: define object constructor
+      //create a function with name starts with upper case letter
+      function Student(sn, a, m) {
+        this.sname = sn;
+        this.age = a;
+        this.marks = m;
+      }
+
+      //step-2: object creation
+      const students1 = new Student("abc", 20, 99);
+
+      const students2 = new Student("def", 21, 58);
+
+      const students3 = new Student("ghi", 20, 91);
+
+      let x = "";
+
+      for (let i in students3) {
+        x = x + students3[i];
+      }
+
+      document.getElementById("studname").innerHTML = `${x}`;
+
+      //console.log(student);
+    </script>
+  </body>
+</html>
