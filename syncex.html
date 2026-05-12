@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>window Example program</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="style6.css" />
+  </head>
+
+  <body>
+    <!--<button id="clk">click me</button>-->
+    <script>
+      console.log("I am stmt1 before event listener"); //1
+      console.log("I am stmt2 before event listener"); //2
+      /*document.getElementById("clk").addEventListener("click", () => {
+        window.alert("hello"); //3
+      });*/
+
+      console.log("I am stmt1 after event listener"); //4
+
+      setTimeout(() => {
+        console.log("i am from timeout"); //4.1
+      }, 8000);
+
+      console.log("I am stmt2 after event listener"); //5
+    </script>
+  </body>
+</html>

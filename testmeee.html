@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JS Class Example program</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="style6.css" />
+  </head>
+
+  <body>
+    <script>
+      const fetchPromise = fetch("https://dummyjson.com/products");
+
+      console.log(fetchPromise);
+
+      fetchPromise.then((r) => r.json()).then(console.log);
+      fetchPromise.catch((s) => {
+        console.log("wrong url" + s);
+      });
+      console.log("Started request…");
+    </script>
+  </body>
+</html>

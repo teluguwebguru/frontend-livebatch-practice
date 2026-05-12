@@ -1,0 +1,44 @@
+<!--Javascript Objects-->
+<!--doctype standard tag is must for bootstrap-->
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Regex in Javascript ex</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale:1.0" />
+  </head>
+  <body>
+    <div id="studname" class="h3"></div>
+
+    <script>
+      let x = "We are learning javascript from teluguwebguru on 20 march 2026"; //string
+      let p = /are/g; //pattern
+      let res = x.search(p); //if not found returns -1, if found it returns index
+      let res1 = x.match(p);
+      console.log("search result:" + res);
+      console.log("match result:" + res1); // it returns matched strings, if not found -> null
+
+      //replace
+      let res2 = x.replace(p, "were");
+      console.log("replace result:" + res2);
+
+      x = "We are learning javascript from teluguwebguru on 20 march 2026";
+      p = /\S/g;
+
+      let res3 = x.match(p);
+      console.log("res3 result:" + res3);
+
+      x = "We are learning javascript from teluguwebguru on 20 march 2026";
+      p = /2026$/i;
+
+      let res4 = x.match(p);
+      console.log("res4 result:" + res4);
+
+      x = "917013484024";
+      p = /\d{10,12}/;
+      let res5 = x.match(p);
+      console.log("res5 result:" + res5);
+    </script>
+  </body>
+</html>
